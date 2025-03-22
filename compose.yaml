@@ -1,0 +1,36 @@
+services:
+  mongodb:
+    image: 'mongo:latest'
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - todos
+      
+  redis:
+    image: 'redis:latest'
+    container_name: redis
+    ports:
+      - "6379:6379"
+    networks:
+      - todos
+
+  app:
+    build: .
+    container_name: todos-api
+    environment:
+      - SPRING_DATA_MONGODB_URI=mongodb://mongodb:27017/todosdb
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb
+      - redis
+    networks:
+      - todos
+
+networks:
+  todos:
+
+volumes:
+  mongodb_data:

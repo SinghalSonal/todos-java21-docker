@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: todos
+  data:
+    mongodb:
+      uri: mongodb://mongodb:27017/todosdb
+  redis:
+    host: redis
+    port: 6379
+
+server:
+  port: 8080
