@@ -7,6 +7,7 @@ import com.sonal.todos.repository.TodoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.Caching;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -42,18 +43,24 @@ public class TodoService {
         return mapper.toDTO(savedTodo);
     }
 
-    @CacheEvict(value = "todos", allEntries = true)
+    @Caching(evict = {
+        @CacheEvict(value = "todos", allEntries = true),
+        @CacheEvict(value = "todo", key = "#id")
+    })
     public TodoDTO updateTodo(String id, TodoDTO updatedTodoDTO) {
         return repository.findById(id).map(existingTodo -> {
             // Use the mapper to update the entity, handling nulls.
             mapper.updateEntity(updatedTodoDTO, existingTodo);
-
+            existingTodo.setId(id);
             Todo updatedTodo = repository.save(existingTodo);
             return mapper.toDTO(updatedTodo);
         }).orElse(null);
     }
 
-    @CacheEvict(value = {"todos", "todo"}, key = "#id")
+    @Caching(evict = {
+            @CacheEvict(value = "todos", allEntries = true),
+            @CacheEvict(value = "todo", key = "#id")
+    })
     public void deleteTodoById(String id) {
         repository.deleteById(id);
     }

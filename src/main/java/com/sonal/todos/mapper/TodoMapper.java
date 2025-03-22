@@ -17,6 +17,6 @@ public interface TodoMapper {
 
     TodoDTO toDTO(Todo entity);
 
-    // map dto.isComplete to entity.completed AND map all other properties
+    @Mapping(target = "id", source = "dto.id")
     Todo updateEntity(TodoDTO dto, @MappingTarget Todo entity);
 }
