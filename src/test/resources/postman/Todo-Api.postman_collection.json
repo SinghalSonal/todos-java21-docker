@@ -44,7 +44,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"Eat fruits\",\n    \"description\": \"Eat fruits to reduce anti oxidants in  body\",\n    \"priority\": \"normal\",\n    \"isComplete\": false\n}"
+					"raw": "{\n    \"title\": \"Eat fruits\",\n    \"description\": \"Eat fruits to reduce anti oxidants in  body\",\n    \"priority\": \"normal\",\n    \"complete\": false\n}"
 				},
 				"url": {
 					"raw": "{{url}}/todos",
@@ -123,7 +123,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": " {\n    \"isComplete\": true\n }"
+					"raw": " {\n    \"title\": \"Eat fruits\",\n    \"description\": \"Eat fruits to reduce anti oxidants in  body\",\n    \"priority\": \"normal\",\n    \"complete\": true //updated\n }"
 				},
 				"url": {
 					"raw": "{{url}}/todos/{{todo_id}}",
@@ -148,13 +148,13 @@
 					"formdata": []
 				},
 				"url": {
-					"raw": "{{url}}/todos/67dee8a186d01071f5b0b1dd",
+					"raw": "{{url}}/todos/{{todo_id}}",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
 						"todos",
-						"67dee8a186d01071f5b0b1dd"
+						"{{todo_id}}"
 					]
 				}
 			},
