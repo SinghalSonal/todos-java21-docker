@@ -15,5 +15,5 @@ public class Todo {
     private String title;
     private String description;
     private String priority;
-    private boolean isComplete;
+    private boolean complete;
 }
