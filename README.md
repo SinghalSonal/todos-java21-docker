@@ -5,15 +5,16 @@ Todos crud api built using modern tech stack:
 * Java 21
 * Gradle 8+
 * Spring Boot 3.4+
-   * Spring Web   
-   * Spring Data: Spring Data MongoDB and Spring Data Redis are used for data access.
+    * Spring Initializr (vscode extension)
+    * Spring Web   
+    * Spring Data: Spring Data MongoDB and Spring Data Redis are used for data access.
 * Cloud Resources
-   * MongoDB
-   * Redis
+    * MongoDB
+    * Redis
 * Docker Container
-   * Dockerfile: The `Dockerfile` in this project defines how to build a Docker image for the application. It specifies the base image, dependencies, and the steps to build and run the application.
-   * Docker Compose: `compose.yaml` defines the services required for the application (MongoDB, Redis, and the application itself). Docker Compose simplifies the process of managing multi-container applications.
-   * Images: The `compose.yaml` file uses the `mongo:latest` and `redis:latest` images. It is recommended to use specific versions in production.
+    * Dockerfile: The `Dockerfile` in this project defines how to build a Docker image for the application. It specifies the base image, dependencies, and the steps to build and run the application.
+    * Docker Compose: `compose.yaml` defines the services required for the application (MongoDB, Redis, and the application itself). Docker Compose simplifies the process of managing multi-container applications.
+    * Images: The `compose.yaml` file uses the `mongo:latest` and `redis:latest` images. It is recommended to use specific versions in production.
 
 ## Local Development Setup
 
@@ -70,18 +71,6 @@ Postman collection and environment files are available at `src/test/resources/po
 *   **Observability:** Micrometer
 *   **Logging/Security:** Spring Boot Aop, Logback/LogStash
 *   **Security:**: Spring Boot Security, JWT token
-
-## Further Information
-
-*   **Spring Boot Documentation:** https://docs.spring.io/spring-boot/3.4.4/reference/
-*   **Java 21 Documentation:** https://docs.oracle.com/en/java/javase/21/
-*   **Gradle Documentation:** https://docs.gradle.org/
-*   **MongoDB Documentation:** https://www.mongodb.com/docs/
-*   **Redis Documentation:** https://redis.io/docs/
-*   **Docker Documentation:** https://docs.docker.com/
-*   **Spring Data MongoDB**: https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/
-*   **Spring Data Redis**: https://docs.spring.io/spring-data/redis/docs/current/reference/html/
-*   **Gradle Build Scans**: https://scans.gradle.com#gradle
 
 ## Personal Note
 
