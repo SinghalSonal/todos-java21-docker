@@ -1,10 +1,13 @@
 # todos-java21-docker
 
-Todos crud api built with modern technologies: Java 21, Spring Boot 3.4+, Gradle 8+, MongoDB, and Redis running apim and cloud resources in Docker containers.
+Todos crud api built using modern tech stack: 
 
-## Personal Note
-
-While my professional background is in .NET development, I thoroughly enjoyed this project as an opportunity to delve into new backend technologies such as Java and Go, as well as containerization with Docker and Kubernetes.
+* Java 21
+* Spring Boot 3.4+
+* Gradle 8+
+* MongoDB
+* Redis 
+* Docker
 
 ## Technology Stack
 
@@ -102,6 +105,15 @@ Here's how to set up and run the project locally using Docker and Gradle:
 Once the application is running, you can access it at `http://localhost:8080`.
 Postman collection and environment files are available at `src/test/resources/postman`.
 
+## Next Phase - libraries / extensions planned
+
+*   **Gateway:** Spring Cloud Gateway
+*   **Rate Limiting:** Resilience4j, Circuit Breaker
+*   **Health/Metrics:** Spring Boot Actuator
+*   **Observability:** Micrometer
+*   **Logging/Security:** Spring Boot Aop, Logback/LogStash
+*   **Security:**: Spring Boot Security, JWT token
+
 ## Further Information
 
 *   **Spring Boot Documentation:** https://docs.spring.io/spring-boot/3.4.4/reference/
@@ -113,3 +125,7 @@ Postman collection and environment files are available at `src/test/resources/po
 *   **Spring Data MongoDB**: https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/
 *   **Spring Data Redis**: https://docs.spring.io/spring-data/redis/docs/current/reference/html/
 *   **Gradle Build Scans**: https://scans.gradle.com#gradle
+
+## Personal Note
+
+While my professional background provided opportunities in .NET and related Azure cloud tech stack, I thoroughly enjoyed learning & coding in Java & Go, as well as containerization with Docker and Kubernetes.
